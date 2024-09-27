@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4f414d4e-a885-441e-9772-b8c63c018c71">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM users
+INNER JOIN selectmembership ON users.username = selectmembership.use_name;]]>
+	</queryString>
+	<field name="username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="f_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="l_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="age" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="diet_preferences" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="diet_restriction" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="membership_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="157" y="15" width="238" height="52" uuid="d0f2c2e1-f480-42d1-8787-9191f480c17f"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[User Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="27" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="19" y="41" width="100" height="20" uuid="2dfb7afb-2ed0-42b2-ac85-15c9f60e7478"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="41" width="115" height="20" uuid="798a0989-b059-4b03-b0ab-cd7d266cbf40"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diet_Preferences]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="41" width="100" height="20" uuid="aed68fdd-4835-4c6f-9f10-4c229f0b996b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diet Restriction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="41" width="119" height="20" uuid="b7e083f7-681d-42c0-9544-e95f7f672410"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Membership Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="19" y="13" width="100" height="20" uuid="b3a8ebf8-b9ec-4f50-8bd3-ed1d6a5e4df1"/>
+				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="294" y="13" width="100" height="20" uuid="79b5083c-da20-4ace-89d9-bf037d9ab73c"/>
+				<textFieldExpression><![CDATA[$F{diet_preferences}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="13" width="100" height="20" uuid="41245538-2600-458e-992a-9b8e6ca09e69"/>
+				<textFieldExpression><![CDATA[$F{diet_restriction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="13" width="129" height="20" uuid="903fe7b0-e450-4f34-ae56-d77bce9d24fd"/>
+				<textFieldExpression><![CDATA[$F{membership_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="29" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="31" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
